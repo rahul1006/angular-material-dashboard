@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import {
   MatButtonModule, MatCheckboxModule, MatTooltipModule, MatToolbarModule, MatSidenavModule,
-  MatIconModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule, MatGridListModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatAutocompleteModule, MatOptionModule, MatInputModule
+  MatIconModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule, MatGridListModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatAutocompleteModule, MatOptionModule, MatInputModule, MatDialogModule, MatSelectModule
 } from '@angular/material';
 
 @NgModule({
@@ -29,7 +29,10 @@ import {
     MatSortModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule],
+    MatMenuModule,
+    MatDialogModule,
+    MatSelectModule
+  ],
   declarations: []
 })
 export class SharedModule { }

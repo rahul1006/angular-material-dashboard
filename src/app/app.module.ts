@@ -9,22 +9,26 @@ import { AppComponent } from './app.component';
 import { ChartComponent } from './chart/chart.component';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app.routing';
-import { Dashboard2Component } from './dashboard2/dashboard2.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MainTableComponent } from './main-table/main-table.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 import { FormFieldComponent } from './form-field/form-field.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BlogPostComponent } from './blog-post/blog-post.component';
+import { DataService } from './blog-post/data.service';
+import { PostDialogComponent } from './blog-post/post-dialog/post-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartComponent,
-    Dashboard2Component,
     MainNavComponent,
     MainTableComponent,
     MainDashboardComponent,
-    FormFieldComponent
+    FormFieldComponent,
+    BlogPostComponent,
+    PostDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -33,11 +37,15 @@ import { FormFieldComponent } from './form-field/form-field.component';
     FormsModule,
     HttpModule,
     RouterModule,
+    FlexLayoutModule,
     AppRoutingModule,
     SharedModule,
     LayoutModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DataService],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    PostDialogComponent
+  ]
 })
 export class AppModule { }
