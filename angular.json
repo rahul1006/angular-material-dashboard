@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "angular-material-dashboard"
+  "defaultProject": "angular-material-dashboard",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
